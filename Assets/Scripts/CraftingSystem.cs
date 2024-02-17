@@ -76,6 +76,27 @@ public class CraftingSystem : MonoBehaviour
             case "Carrot":
                 spriteIndex = 6;
                 break;
+            case "Pineapple":
+                spriteIndex = 7;
+                break;
+            case "Orange":
+                spriteIndex = 8;
+                break;
+            case "Egg":
+                spriteIndex = 9;
+                break;
+            case "Cherry":
+                spriteIndex = 10;
+                break;
+            case "Cheese":
+                spriteIndex = 11;
+                break;
+            case "Candle":
+                spriteIndex = 12;
+                break;
+            case "Banana":
+                spriteIndex = 13;
+                break;
             // Add similar cases for other identifiers
 
             default:
@@ -87,6 +108,7 @@ public class CraftingSystem : MonoBehaviour
         {
             Debug.Log(spriteIndex);
             Cake.transform.GetChild(childIndex).GetComponent<SpriteRenderer>().sprite = sprites[spriteIndex];
+            Cake.SetActive(true);
         }
     }
 
