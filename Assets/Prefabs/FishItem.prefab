@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4823152683338581407}
   - component: {fileID: 2284519665692824312}
   m_Layer: 5
-  m_Name: KnivButton
+  m_Name: FishItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 89347447, guid: 86a64d9369dd5c24b9eec8ec8cbd6e2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 032542d3246f4064dbe1093ed50a1f48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
