@@ -14,7 +14,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene");    // main scene
+        SceneManager.LoadScene("Game");    // main scene
     }
 
     public void Settings()
