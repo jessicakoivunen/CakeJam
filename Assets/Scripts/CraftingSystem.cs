@@ -5,86 +5,111 @@ using static UnityEditor.Progress;
 
 public class CraftingSystem : MonoBehaviour
 {
-    public Inventory inventory;
+    public GameObject Item1;
+    public GameObject Item2;
+    public GameObject Item3;
+    public GameObject Cake;
+    public Sprite[] topping;
+    public Sprite[] filling;
+    public Sprite[] body;
 
-    // Define the crafting recipe
-    public GameObject ingredient1Prefab;  // Replace with the actual prefab for item 1
-    public GameObject ingredient2Prefab;  // Replace with the actual prefab for item 2
-    public GameObject ingredient3Prefab;  // Replace with the actual prefab for item 3
-
-    public GameObject resultPrefab;  // Replace with the actual prefab for the crafted item
 
     private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-    }
+        Item1 = GameObject.FindGameObjectsWithTag("Item")[0];
+        Item2 = GameObject.FindGameObjectsWithTag("Item")[1];
+        Item3 = GameObject.FindGameObjectsWithTag("Item")[2];
 
-    private void Update()
-    {
-        // Check for crafting conditions (e.g., when a button is pressed)
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Item1.name == "WoodItem")
         {
-            Craft();
+            Cake.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = topping[0];
         }
-    }
-
-    void Craft()
-    {
-        // Check if both itemA and itemB are in the inventory
-        int itemACount = CountItemsInInventory(ingredient1Prefab);
-        int itemBCount = CountItemsInInventory(ingredient2Prefab);
-        int itemCCount = CountItemsInInventory(ingredient3Prefab);
-
-
-        if (itemACount >= 1 && itemBCount >= 1)
+        else if (Item1.name == "StoneItem")
         {
-            // Remove the required items from the inventory
-            RemoveItemFromInventory(ingredient1Prefab);
-            RemoveItemFromInventory(ingredient2Prefab);
-            RemoveItemFromInventory(ingredient3Prefab);
-
-            // Add the crafted item to the inventory
-            AddItemToInventory(resultPrefab);
+            Cake.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = topping[1];
         }
-    }
-
-    int CountItemsInInventory(GameObject item)
-    {
-        int count = 0;
-        foreach (GameObject slot in inventory.slots)
+        else if (Item1.name == "MeatItem")
         {
-            if (slot.transform.childCount > 0 && slot.transform.GetChild(0).gameObject == item)
-            {
-                count++;
-            }
+            Cake.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = topping[2];
         }
-        return count;
+        else if (Item1.name == "FlourItem")
+        {
+            Cake.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = topping[3];
+        }
+        else if (Item1.name == "FishItem")
+        {
+            Cake.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = topping[4];
+        }
+        else if (Item1.name == "CreamItem")
+        {
+            Cake.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = topping[5];
+        }
+        else if (Item1.name == "CarrotItem")
+        {
+            Cake.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = topping[6];
+        }
+
+        if (Item2.name == "WoodItem")
+        {
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[0];
+        }
+        else if (Item2.name == "StoneItem")
+        {
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[1];
+        }
+        else if (Item2.name == "MeatItem")
+        {
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[2];
+        }
+        else if (Item2.name == "FlourItem")
+        {
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[3];
+        }
+        else if (Item2.name == "FishItem")
+        {
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[4];
+        }
+        else if (Item2.name == "CreamItem")
+        {
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[5];
+        }
+        else if (Item2.name == "CarrotItem")
+        {
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[6];
+        }
+
+        if (Item3.name == "WoodItem")
+        {
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[0];
+        }
+        else if (Item3.name == "StoneItem")
+        {
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[1];
+        }
+        else if (Item3.name == "MeatItem")
+        {
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[2];
+        }
+        else if (Item3.name == "FlourItem")
+        {
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[3];
+        }
+        else if (Item3.name == "FishItem")
+        {
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[4];
+        }
+        else if (Item3.name == "CreamItem")
+        {
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[5];
+        }
+        else if (Item3.name == "CarrotItem")
+        {
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[6];
+        }
+
     }
 
-    void RemoveItemFromInventory(GameObject item)
-    {
-        foreach (GameObject slot in inventory.slots)
-        {
-            if (slot.transform.childCount > 0 && slot.transform.GetChild(0).gameObject == item)
-            {
-                Destroy(slot.transform.GetChild(0).gameObject);
-                break; // Assuming each item can only appear once in the inventory
-            }
-        }
-    }
 
-    void AddItemToInventory(GameObject item)
-    {
-        for (int i = 0; i < inventory.slots.Length; i++)
-        {
-            if (inventory.isFull[i] == false)
-            {
-                // Add the crafted item to an empty slot in the inventory
-                inventory.isFull[i] = true;
-                Instantiate(item, inventory.slots[i].transform, false);
-                break;
-            }
-        }
-    }
+   
 }
 
