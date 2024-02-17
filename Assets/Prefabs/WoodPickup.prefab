@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 358621564529969663}
   - component: {fileID: 1454149680261352519}
   m_Layer: 0
-  m_Name: StickPickup
+  m_Name: WoodPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

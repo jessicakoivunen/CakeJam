@@ -51,60 +51,60 @@ public class CraftingSystem : MonoBehaviour
 
         if (Item2.name == "WoodItem")
         {
-            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[0];
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = filling[0];
         }
         else if (Item2.name == "StoneItem")
         {
-            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[1];
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = filling[1];
         }
         else if (Item2.name == "MeatItem")
         {
-            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[2];
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = filling[2];
         }
         else if (Item2.name == "FlourItem")
         {
-            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[3];
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = filling[3];
         }
         else if (Item2.name == "FishItem")
         {
-            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[4];
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = filling[4];
         }
         else if (Item2.name == "CreamItem")
         {
-            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[5];
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = filling[5];
         }
         else if (Item2.name == "CarrotItem")
         {
-            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = topping[6];
+            Cake.transform.GetChild(1).GetComponent<SpriteRenderer>().sprite = filling[6];
         }
 
         if (Item3.name == "WoodItem")
         {
-            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[0];
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = body[0];
         }
         else if (Item3.name == "StoneItem")
         {
-            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[1];
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = body[1];
         }
         else if (Item3.name == "MeatItem")
         {
-            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[2];
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = body[2];
         }
         else if (Item3.name == "FlourItem")
         {
-            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[3];
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = body[3];
         }
         else if (Item3.name == "FishItem")
         {
-            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[4];
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = body[4];
         }
         else if (Item3.name == "CreamItem")
         {
-            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[5];
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = body[5];
         }
         else if (Item3.name == "CarrotItem")
         {
-            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = topping[6];
+            Cake.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = body[6];
         }
 
     }

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4823152683338581407}
   - component: {fileID: 2284519665692824312}
   m_Layer: 5
-  m_Name: StickItem
-  m_TagString: Untagged
+  m_Name: WoodItem
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
