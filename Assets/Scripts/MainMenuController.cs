@@ -19,7 +19,6 @@ public class MainMenuController : MonoBehaviour
 
     public void Settings()
     {
-        Debug.Log("Settings button clicked");
         mainMenu.SetActive(false);
         settingsMenu.SetActive(true);
         aboutMenu.SetActive(false);
@@ -27,7 +26,6 @@ public class MainMenuController : MonoBehaviour
 
     public void Back()
     {
-        Debug.Log("Back button clicked");
         mainMenu.SetActive(true);
         settingsMenu.SetActive(false);
         aboutMenu.SetActive(false);
@@ -35,7 +33,6 @@ public class MainMenuController : MonoBehaviour
 
     public void About()
     {
-        Debug.Log("About button clicked");
         mainMenu.SetActive(false);
         settingsMenu.SetActive(false);
         aboutMenu.SetActive(true);
@@ -43,7 +40,7 @@ public class MainMenuController : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("Quit button clicked");
+        Debug.Log("SUJE");
         Application.Quit();
     }
 
