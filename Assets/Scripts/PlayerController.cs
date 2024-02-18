@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
 
+    public GameObject uiCake;
 
     private void Awake()
     {
@@ -18,16 +19,26 @@ public class PlayerController : MonoBehaviour
 
     private void OnMovement(InputValue value)
     {
-        movement = value.Get<Vector2>();
+        if (!uiCake.activeInHierarchy)
+        {
+            movement = value.Get<Vector2>();
 
-        if (movement.x != 0 || movement.y != 0) { 
+            if (movement.x != 0 || movement.y != 0) { 
+                animator.SetFloat("X", movement.x);
+                animator.SetFloat("Y", movement.y);
+
+                animator.SetBool("IsWalking", true);
+            }
+            else {
+                animator.SetBool("IsWalking", false);
+            }
+        }
+        else
+        {
+            movement = new Vector2(0, 0);
+            animator.SetBool("IsWalking", false);
             animator.SetFloat("X", movement.x);
             animator.SetFloat("Y", movement.y);
-
-            animator.SetBool("IsWalking", true);
-        }
-        else {
-            animator.SetBool("IsWalking", false);
         }
     }
 
