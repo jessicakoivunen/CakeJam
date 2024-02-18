@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
@@ -8,6 +9,7 @@ public class Pickup : MonoBehaviour
     private Inventory inventory;
     public GameObject itemButton;
     private float pickupDelay = 1f;
+    public GameObject particle;
 
     private void Start()
     {
@@ -31,6 +33,9 @@ public class Pickup : MonoBehaviour
                     //item can be added to inventory
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
+
+                    GameObject puff = Instantiate(particle, transform.position, quaternion.identity);
+                    puff.transform.parent = null;
                     Destroy(gameObject);
                     break;
                 }

@@ -7,8 +7,7 @@ public class SettingsMenu : MonoBehaviour
 {
     public Slider musicVolumeSlider;
     public Slider effectsVolumeSlider;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.75f);

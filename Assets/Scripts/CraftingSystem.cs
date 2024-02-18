@@ -8,6 +8,8 @@ using TMPro;
 public class CraftingSystem : MonoBehaviour
 {
     public GameObject grandma;
+    public int cakesBaked;
+    public TMP_Text cakesText;
     public GameObject Item1;
     public GameObject Item2;
     public GameObject Item3;
@@ -19,6 +21,11 @@ public class CraftingSystem : MonoBehaviour
     public string[] reviews;
     public GameObject reviewHolder;
     public TMP_Text[] reviewBoxes;
+
+    private void Update()
+    {
+        cakesText.text = "Cakes Baked: " + cakesBaked;
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -40,6 +47,7 @@ public class CraftingSystem : MonoBehaviour
             Destroy(shuffledItems[1]);
             Destroy(shuffledItems[2]);
             soundManager.soundManagement.playSound(1);
+            cakesBaked++;
         }
     }
 

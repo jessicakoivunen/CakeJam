@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public bool paused;
 
+    public float stepSoundDelay;
+
     public float cackleTimer;
 
     private void Awake()
@@ -61,6 +63,17 @@ public class PlayerController : MonoBehaviour
         {
             soundManager.soundManagement.playSound(2);
             cackleTimer = Random.Range(5, 120);
+        }
+
+        if (stepSoundDelay > 0)
+        {
+            stepSoundDelay -= Time.deltaTime;
+        }
+        
+        if (stepSoundDelay <= 0 && animator.GetBool("IsWalking"))
+        {
+            soundManager.soundManagement.playSound(3);
+            stepSoundDelay = 0.5f;
         }
     }
 }
