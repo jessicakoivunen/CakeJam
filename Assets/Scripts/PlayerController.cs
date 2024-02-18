@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     public bool paused;
+
+    public float cackleTimer;
 
     private void Awake()
     {
@@ -45,5 +49,18 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position +  movement * speed * Time.fixedDeltaTime);
+    }
+
+    private void Update()
+    {
+        if (cackleTimer > 0)
+        {
+            cackleTimer -= Time.deltaTime;
+        }
+        else
+        {
+            soundManager.soundManagement.playSound(2);
+            cackleTimer = Random.Range(5, 120);
+        }
     }
 }

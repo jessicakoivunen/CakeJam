@@ -39,6 +39,7 @@ public class CraftingSystem : MonoBehaviour
             Destroy(shuffledItems[0]);
             Destroy(shuffledItems[1]);
             Destroy(shuffledItems[2]);
+            soundManager.soundManagement.playSound(1);
         }
     }
 
