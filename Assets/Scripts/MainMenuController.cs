@@ -30,7 +30,7 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Back button clicked");
         mainMenu.SetActive(true);
         settingsMenu.SetActive(false);
-        aboutMenu.SetActive(true);
+        aboutMenu.SetActive(false);
     }
 
     public void About()
