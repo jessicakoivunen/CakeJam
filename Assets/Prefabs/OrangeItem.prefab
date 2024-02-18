@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2284519665692824312}
   - component: {fileID: 8381346835241521957}
   m_Layer: 5
-  m_Name: LemonItem
+  m_Name: OrangeItem
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,4 +147,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1079f71cf7bf074393c73a033c91423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: Lemon
+  identifier: Orange

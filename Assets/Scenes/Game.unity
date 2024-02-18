@@ -315,6 +315,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3585934269460654993, guid: 91fc5d73506e53342a964563d798f1a0, type: 3}
+      propertyPath: uiCake
+      value: 
+      objectReference: {fileID: 1145131509}
     - target: {fileID: 4105849084973491328, guid: 91fc5d73506e53342a964563d798f1a0, type: 3}
       propertyPath: m_Name
       value: Grandmother
