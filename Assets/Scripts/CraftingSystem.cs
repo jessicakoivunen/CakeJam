@@ -106,6 +106,9 @@ public class CraftingSystem : MonoBehaviour
             case "Banana":
                 spriteIndex = 13;
                 break;
+            case "Berry":
+                spriteIndex = 14;
+                break;
             // Add similar cases for other identifiers
 
             default:
