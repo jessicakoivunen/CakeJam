@@ -18,10 +18,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void UpdateMusicVolume()
     {
-        PlayerPrefs.SetFloat("MusicVolume", musicVolumeSlider.value);
-    }
-    public void UpdateEffectsVolume()
-    {
-        PlayerPrefs.SetFloat("EffectsVolume", effectsVolumeSlider .value);
+        PlayerPrefs.SetFloat("MainVolume", musicVolumeSlider.value);
+        AudioListener.volume = PlayerPrefs.GetFloat("MainVolume");
     }
 }
