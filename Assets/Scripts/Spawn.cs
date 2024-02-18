@@ -9,6 +9,7 @@ public class Spawn : MonoBehaviour
 
     private void Start()
     {
+        soundManager.soundManagement.playSound(0);
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
