@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+using TMPro;
 
 public class CraftingSystem : MonoBehaviour
 {
+    public GameObject grandma;
     public GameObject Item1;
     public GameObject Item2;
     public GameObject Item3;
@@ -12,10 +16,14 @@ public class CraftingSystem : MonoBehaviour
     public Sprite[] filling;
     public Sprite[] body;
 
+    public string[] reviews;
+    public GameObject reviewHolder;
+    public TMP_Text[] reviewBoxes;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
-
+        
         if (items.Length >= 3)
         {
             // Shuffle the items
@@ -109,7 +117,28 @@ public class CraftingSystem : MonoBehaviour
             Debug.Log(spriteIndex);
             Cake.transform.GetChild(childIndex).GetComponent<SpriteRenderer>().sprite = sprites[spriteIndex];
             Cake.SetActive(true);
+            Cake.GetComponent<Animator>().Play("CakeAppear");
+            grandma.GetComponent<PlayerController>().paused = true;
+            Reviews();
         }
     }
 
+    private void Reviews()
+    {
+        reviewHolder.SetActive(true);
+        reviewHolder.GetComponent<Animator>().Play("reviewsAppear");
+        int rng = Random.Range(0, reviews.Length);
+        reviewBoxes[0].text = reviews[rng];
+        rng = Random.Range(0, reviews.Length);
+        reviewBoxes[1].text = reviews[rng];
+        rng = Random.Range(0, reviews.Length);
+        reviewBoxes[2].text = reviews[rng];
+    }
+
+    public void hideStuff()
+    {
+        reviewHolder.GetComponent<Animator>().Play("reviewsDisappear");
+        Cake.GetComponent<Animator>().Play("CakeDisappear");
+        grandma.GetComponent<PlayerController>().paused = false;
+    }
 }

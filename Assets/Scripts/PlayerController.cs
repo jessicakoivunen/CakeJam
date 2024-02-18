@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
 
-    public GameObject uiCake;
+    public bool paused;
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnMovement(InputValue value)
     {
-        if (!uiCake.activeInHierarchy)
+        if (!paused)
         {
             movement = value.Get<Vector2>();
 
