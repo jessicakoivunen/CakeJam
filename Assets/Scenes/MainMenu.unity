@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.94, y: -4.09}
+  m_AnchoredPosition: {x: -1.94, y: 109.31001}
   m_SizeDelta: {x: 542.12, y: 134.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &305648918
@@ -525,8 +525,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This awesome game was made by Mikko Anttila, Valtteri Vepse, Jesse Eerik\xE4inen,
-    Jessica Koivunen\n\n\nCopyright \xA9 2024-2025"
+  m_text: "Walk around and collect ingredients and bring them to the oven to bake
+    fantastic cakes!\n\nThis awesome game was made by Mikko Anttila, Valtteri Vepse,
+    Jesse Eerik\xE4inen, Jessica Koivunen\n\n\nCopyright \xA9 2024-2025"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 97e8df67a18392741bcd6007092c7af5, type: 2}
   m_sharedMaterial: {fileID: 6931546573945205263, guid: 97e8df67a18392741bcd6007092c7af5, type: 2}
@@ -6846,7 +6847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 104.5}
+  m_AnchoredPosition: {x: 0, y: 234.09999}
   m_SizeDelta: {x: -354.09, y: -226.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &846313250
